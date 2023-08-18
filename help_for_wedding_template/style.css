@@ -1,0 +1,380 @@
+@font-face {
+    font-family: 'aramian_outlinenormal';
+    src: url('./webfontkit-20230815-062955/aramian_outline-webfont.woff2') format('woff2'),
+         url('./webfontkit-20230815-062955/aramian_outline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* https://www.fontsquirrel.com/tools/webfont-generator */
+/* https://www.font2web.com//?error=generic_error */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    background: #424242;
+    min-height: 100vh;
+}
+.information_About_timer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	color: #faf5f5;
+	margin: 10px;
+}
+
+.timer_countDown {
+	min-height: 200px;
+	background: #0b0b0b7a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.timer_center {
+	width: 650px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.timerBox {
+	border: 2px solid black;
+	width: 150px;
+	height: 150px;
+	border: none;
+	border-right: 1px solid white;
+}
+
+.lastBorderNone {
+	border-right: none;
+
+}
+
+.timer_numbers {
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Pacifico", cursive;
+	font-size: 100px;
+	color: white;
+}
+
+
+.timer_day_min_sec {
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+
+}
+
+.arrow_Down {
+	text-align: center;
+	color: white;
+	font-size: 52px;
+}
+
+.arrow_Down>a {
+	color: white;
+
+}
+
+.arrow_Down>a>i {
+	cursor: pointer;
+	animation: mover 1s infinite alternate;
+
+}
+
+@keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-10px);
+	}
+}
+
+/* __________________________________part 2_______________________________________________________________ */
+
+
+
+.form_part {
+	margin: 70px 0;
+	width: 350px;
+	height: 400px;
+	position: relative;
+}
+
+
+.attention_information>p {
+	text-align: center;
+}
+
+.attention_information>h3 {
+	text-align: center;
+}
+
+
+
+
+.login-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 340px;
+	padding: 4px;
+	margin: 20px auto;
+	transform: translate(-50%, -55%);
+	background: rgba(210, 209, 209, 0.6);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(112, 111, 111, 0.6);
+	border-radius: 10px;
+}
+
+
+.radio_part {
+	margin: 10px 0;
+}
+
+.login-box p:first-child {
+	margin: 0 0 30px;
+	padding: 0;
+	color: #1a1919;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.login-box .user-box {
+	position: relative;
+}
+
+.login-box .user-box input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #070707;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #171616;
+	outline: none;
+	background: transparent;
+}
+
+.login-box .user-box label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #080808;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+	top: -20px;
+	left: 0;
+	color: #0f0e0e;
+	font-size: 12px;
+}
+
+.login-box form a {
+	position: relative;
+	display: inline-block;
+	padding: 2px 3px;
+	font-weight: bold;
+	color: #080808;
+	font-size: 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: .5s;
+	margin-top: 40px;
+	letter-spacing: 3px
+}
+
+.login-box a:hover {
+	background: #0a0909;
+	color: #f7f5f5;
+	border-radius: 5px;
+}
+
+.login-box a span {
+	position: absolute;
+	display: block;
+}
+
+.login-box a span:nth-child(1) {
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #121111);
+	animation: btn-anim1 1.5s linear infinite;
+}
+
+.send_info_btn {
+	background: transparent;
+	width: 150px;
+	height: 35px;
+	cursor: pointer;
+}
+
+.send_info_btn:hover {
+	background: #000;
+	color: white;
+}
+
+@keyframes btn-anim1 {
+	0% {
+		left: -100%;
+	}
+
+	50%,
+	100% {
+		left: 100%;
+	}
+}
+
+.login-box a span:nth-child(2) {
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #080808);
+	animation: btn-anim2 1.5s linear infinite;
+	animation-delay: .375s
+}
+
+@keyframes btn-anim2 {
+	0% {
+		top: -100%;
+	}
+
+	50%,
+	100% {
+		top: 100%;
+	}
+}
+
+.login-box a span:nth-child(3) {
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #0a0a0a);
+	animation: btn-anim3 1.5s linear infinite;
+	animation-delay: .75s
+}
+
+@keyframes btn-anim3 {
+	0% {
+		right: -100%;
+	}
+
+	50%,
+	100% {
+		right: 100%;
+	}
+}
+
+.login-box a span:nth-child(4) {
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #0c0c0c);
+	animation: btn-anim4 1.5s linear infinite;
+	animation-delay: 1.125s
+}
+
+@keyframes btn-anim4 {
+	0% {
+		bottom: -100%;
+	}
+
+	50%,
+	100% {
+		bottom: 100%;
+	}
+}
+
+.login-box p:last-child {
+	color: #070707;
+	font-size: 14px;
+}
+
+.login-box a.a2 {
+	color: #0b0a0a;
+	text-decoration: none;
+}
+
+.login-box a.a2:hover {
+	background: transparent;
+	color: #0c0c0c;
+	border-radius: 5px;
+}
+
+/* _____________________________________________part 3_________________________________________________ */
+
+
+
+
+.pseudo_elem{
+    height: 200px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: white;
+    transition: 1s;
+}
+
+.menuItem{
+    font-family: "aramian_outlinenormal";
+}
+
+
+.menuItem::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fdfafa;
+    opacity: 0;
+    transition: 1s;
+    transform: scaleX(0);
+    transform-origin: 50%;
+}
+
+.menuItem:hover::after{
+    transform: scaleX(1);
+    opacity: 1;
+    /* width: 100%; */
+
+}
+
+
+
+
+
